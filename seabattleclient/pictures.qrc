@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>background.png</file>
+        <file>dot.png</file>
+        <file>injured.png</file>
+    </qresource>
+</RCC>
