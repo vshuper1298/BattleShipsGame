@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QPainter painter(this);
     painter.drawImage(0, this->menuBar()->geometry().height(), pictures->get("field"));
     field1 = new Field(pictures, 23, 42, 259, 252);
-    field2 = new Field(pictures, 322, 39, 214, 217);
+    field2 = new Field(pictures, 358, 43, 260, 252);
     
     field1->redraw();
     field2->redraw();
@@ -34,8 +34,6 @@ void MainWindow::paintEvent(QPaintEvent *event)
     painter.drawImage(0, this->menuBar()->geometry().height(), pictures->get("field"));
     painter.drawImage(field1->x(), this->menuBar()->geometry().height()+field1->y(), field1->Image());
     painter.drawImage(field2->x(), this->menuBar()->geometry().height()+field2->y(), field2->Image());
-                //qDebug() << pictures->get("field").isNull();
-
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
