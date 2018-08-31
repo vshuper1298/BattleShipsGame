@@ -17,13 +17,13 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
 protected:
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
 
 private slots:
-    void slotActionStart();
+    void on_actionStart_triggered();
+
 private:
     Ui::MainWindow *ui;
     State state;

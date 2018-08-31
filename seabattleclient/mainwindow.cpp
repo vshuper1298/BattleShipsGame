@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include <QPainter>
 #include <QDebug>
 #include <QMouseEvent>
@@ -15,9 +16,6 @@ MainWindow::MainWindow(QWidget *parent) :
     painter.drawImage(0, this->menuBar()->geometry().height(), pictures->get("field"));
     field1 = new Field(pictures, 23, 42, 259, 252);
     field2 = new Field(pictures, 358, 43, 260, 252);
-    
-    field1->redraw();
-    field2->redraw();
     
     state = PLACING_SHIPS;
 }
@@ -50,7 +48,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
                 return;
             }
             qDebug() << "Ship at" << point.x() << point.y();
-            field1->setCell(point.x(), point.y(), INJURED);
+            field1->setCell(point.x(), point.y(), SHIP);
             field1->redraw();
             this->update();
             break;
@@ -75,7 +73,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 //            break;
     }
 }
-void MainWindow::slotActionStart()
+
+void MainWindow::on_actionStart_triggered()
 {
 
 }

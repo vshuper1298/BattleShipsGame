@@ -1,6 +1,8 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+const int kSize = 10;
+
 enum State
 {
     PLACING_SHIPS,
