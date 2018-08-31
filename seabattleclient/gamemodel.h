@@ -13,6 +13,7 @@ public:
     void setCoordinates(int number, int x, int y);
     bool isCorrectPlacement();
     void setState(State state);
+    State state();
 private:
     State gameState;
     Field *playerField;

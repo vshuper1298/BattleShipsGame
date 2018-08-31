@@ -17,3 +17,8 @@ void GameModel::setState(State state)
 {
     gameState = state;
 }
+
+State GameModel::state()
+{
+    return gameState;
+}
