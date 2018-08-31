@@ -12,3 +12,8 @@ GameModel::~GameModel()
     delete playerField;
     delete enemyField;
 }
+
+void GameModel::setState(State state)
+{
+    gameState = state;
+}
