@@ -9,8 +9,8 @@ class GameModel
 public:
     GameModel(Images *images);
     ~GameModel();
-    Ship (int x, int y, int size = 1);
-    void setCoordinates(int number, int x, int y);
+//    Ship (int x, int y, int size = 1);
+    QPoint changeCoordinates(int x, int y, CurrentField currentField);
     bool isCorrectPlacement();
     void setState(State state);
     State state();

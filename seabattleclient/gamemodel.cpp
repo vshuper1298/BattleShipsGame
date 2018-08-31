@@ -22,3 +22,15 @@ State GameModel::state()
 {
     return gameState;
 }
+
+QPoint GameModel::changeCoordinates(int x, int y, CurrentField currentField)
+{
+    if (currentField == PLAYER_FIELD)
+    {
+        return playerField->coordinates(x, y);
+    }
+    else
+    {
+        return enemyField->coordinates(x, y);
+    }
+}
