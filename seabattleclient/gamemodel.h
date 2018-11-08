@@ -15,6 +15,7 @@ public:
     bool isShipSize(int x, int y, int size);
     bool isShipSingleDeck(int x, int y);
     void setState(State state);
+    int shipsCount(int size);
     State state();
 private:
     State gameState;

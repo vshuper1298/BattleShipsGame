@@ -1,4 +1,5 @@
 #include "gamemodel.h"
+#include "constants.h"
 
 GameModel::GameModel(Images *images)
 {
@@ -81,4 +82,23 @@ bool GameModel::isShipSize(int x, int y, int size)
         return true;
     else
         return false;
+}
+
+bool GameModel::isCorrectPlacement()
+{
+
+}
+
+int GameModel::shipsCount(int size)
+{
+    int counter;
+    for (int i = 0; i < kSize; i++)
+    {
+        for (int j = 0; j < kSize; j++)
+        {
+            if (isShipSize(i, j, size))
+                counter++;
+        }
+    }
+    return counter;
 }
