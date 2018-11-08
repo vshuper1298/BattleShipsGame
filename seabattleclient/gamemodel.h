@@ -7,11 +7,13 @@
 class GameModel
 {
 public:
-    GameModel(Images *images);
+    explicit GameModel(Images *images);
     ~GameModel();
 //    Ship (int x, int y, int size = 1);
     QPoint changeCoordinates(int x, int y, CurrentField currentField);
     bool isCorrectPlacement();
+    bool isShipSize(int x, int y, int size);
+    bool isShipSingleDeck(int x, int y);
     void setState(State state);
     State state();
 private:
